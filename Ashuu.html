@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASMA</title>
+<meta charset="utf-8">
+<meta name="viewport" content"width-device-width, scale=0.5,maximum-scale=5.0,minimum-scale=0.5">
+<style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css');
+*{
+ margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family:Algerian;
+}
+section{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+min_height: 100vh;
+background: bule;
+overflow: hidden;
+}
+ection.text{
+position:relative;
+color:Red;
+margin:40px;
+mae-width: 800px;
+user-select: none;
+font-size: 3.2em;
+}
+section.text span{
+position: relative;
+display: inline-block;
+cursor: pointer;
+}
+section.text span.active{
+animation: smoke 2s linear forwards;
+transform-origin: bottom;
+}
+@keyframes smoke
+{
+ 0% I
+{
+opacity: 1;
+filter: blur(0);
+transform: translatex(0) translatey(0) rotate(0deg) scale(1);
+}
+50%
+{
+opacity: 1;
+pointer-events: none;
+}
+100%
+{
+opacity: 0;
+filter: blur(20px);
+transform: translatex(300px) translatey(-300px) rotate(720deg) scale(4);
+}
+} 
+
+
+</style>
+</head>
+<body>
+<section>
+<h1 class="text">ASMA you are my first and last love, 
+i cant expalin you how important you are to me, 
+blessed to have you in my life, 
+from 2018-2022 these hepls me to get closer to you , 
+you are such a awesome soul i have ever seen just, 
+love you asma.
+
+
+
+
+                              SORRY 
+                         if i hurted you means</h1>
+
+</section>
+<script>
+const text = document.querySelector('text');
+text.innerHTML = text.textContent.replace(/\s/g,"<span>$&</span>");
+const letters = document.querySelectorAll('span');
+for(let i=0;i<letters.length;i++){
+letters[i].addEventListener("mouseover",function(){
+letters[i].calssList.add('active')
+})
+}
+</script>
+</body>
+</html>
